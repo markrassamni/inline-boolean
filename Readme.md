@@ -2,7 +2,9 @@
 
 Adds the ability to edit a boolean field directly from the index or detail page of a resource.
 
-![](https://raw.githubusercontent.com/markrassamni/inline-boolean/master/InlineBoolean.png)
+![](https://raw.githubusercontent.com/markrassamni/inline-boolean/master/InlineBooleanIndex.png)
+
+![](https://raw.githubusercontent.com/markrassamni/inline-boolean/master/InlineBooleanDetail.png)
 
 ## Prerequisites
  - [Laravel](https://laravel.com/)
