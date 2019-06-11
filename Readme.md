@@ -1,5 +1,7 @@
 # Laravel Nova: Inline Boolean
 
+[![Latest Stable Version](https://poser.pugx.org/markrassamni/inline-boolean/v/stable)](https://packagist.org/packages/markrassamni/inline-boolean) [![Total Downloads](https://poser.pugx.org/markrassamni/inline-boolean/downloads)](https://packagist.org/packages/markrassamni/inline-boolean) [![License](https://poser.pugx.org/markrassamni/inline-boolean/license)](https://packagist.org/packages/markrassamni/inline-boolean)
+
 Adds the ability to edit a boolean field directly from the index or detail page of a resource.
 
 ![](https://raw.githubusercontent.com/markrassamni/inline-boolean/master/InlineBooleanIndex.png)
