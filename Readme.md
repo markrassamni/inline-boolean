@@ -29,12 +29,13 @@ class MyResource extends Resource
     {
         return [
             InlineBoolean::make('Enabled')
-                ->enableMessage('Boolean has been enabled.')
-                ->disableMessage('Boolean has been disabled.')
-                ->inlineOnIndex()
-                ->showTextOnIndex()
-                ->trueText('Enabled')
-                ->falseText('Disabled')
+                ->inlineOnIndex()  // Use inline field on the index page
+                ->inlineOnDetail()  // Use inline field on the detail page
+                ->enableMessage('Boolean has been enabled.')  // Toast message when enabling boolean
+                ->disableMessage('Boolean has been disabled.')  // Toast message when disabling boolean
+                ->trueText('Enabled')  // Change the text describing true boolean values
+                ->falseText('Disabled')  // Change the text describing false boolean values
+                ->showTextOnIndex()  // Show true/false text beside the checkbox on the index page
         ];
     }
 }
