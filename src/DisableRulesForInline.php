@@ -10,7 +10,7 @@ trait DisableRulesForInline
 
 	public static function rulesForUpdate(NovaRequest $request, $resource = null)
     {
-        if ($request->has('is_inline') and $request->input('is_inline') === '1') {
+        if ($request->has('is_inline_update') and $request->input('is_inline_update') === '1') {
             return [];
         }
 
