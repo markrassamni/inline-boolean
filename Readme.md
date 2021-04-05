@@ -22,11 +22,17 @@ $ composer require markrassamni/inline-boolean
 
 Use the `MarkRassamni\InlineBoolean\InlineBoolean` field in your Nova resource:
 
+And add trait DisableRulesForInline
+
+
 ```php
 use MarkRassamni\InlineBoolean\InlineBoolean;
+use MarkRassamni\InlineBoolean\DisableRulesForInline;
 
 class MyResource extends Resource
 {
+    use DisableRulesForInline;
+
     public function fields(Request $request)
     {
         return [

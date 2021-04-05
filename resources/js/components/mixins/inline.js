@@ -13,6 +13,7 @@ export default {
 
             formData.append(this.field.attribute, value);
             formData.append('_method', 'PUT');
+            formData.append('is_inline_update', '1');
 
             return Nova.request().post(`/nova-api/${this.resourceName}/${this.resourceId}`, formData)
                 .then(() => {
