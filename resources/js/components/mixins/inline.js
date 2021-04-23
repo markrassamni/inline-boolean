@@ -1,7 +1,7 @@
 export default {
     computed: {
         displayValue() {
-            return this.value ? (this.field.trueText ? this.field.trueText :  this.__('Yes')) : (this.field.falseText ? this.field.falseText :  this.__('Yes'));
+            return this.value ? (this.field.trueText ? this.field.trueText :  this.__('Yes')) : (this.field.falseText ? this.field.falseText :  this.__('No'));
         }
     },
 
