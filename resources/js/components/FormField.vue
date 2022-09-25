@@ -1,6 +1,6 @@
 <template>
-    <default-field :field="field" :errors="errors">
-        <template slot="field">
+    <default-field :field="field" :errors="errors" :show-help-text="showHelpText">
+        <template #field>
             <checkbox
                     class="py-2"
                     @input="toggle"
@@ -14,10 +14,12 @@
 </template>
 
 <script>
-    import { Errors, FormField, HandlesValidationErrors } from 'laravel-nova'
+    import { FormField, HandlesValidationErrors } from 'laravel-nova'
 
     export default {
         mixins: [HandlesValidationErrors, FormField],
+
+        props: ['resourceName', 'resourceId', 'field'],
 
         data: () => ({
             value: false,
