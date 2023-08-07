@@ -17,9 +17,9 @@ export default {
             return Nova.request().post(`/nova-api/${this.resourceName}/${this.resourceId}`, formData)
                 .then(() => {
                     let message = this.value ? this.field.enableMessage : this.field.disableMessage;
-                    this.$toasted.show(message, {type: 'success'});
+                    Nova.$toasted.show(message, {type: 'success'});
                 }, (response) => {
-                    this.$toasted.show(response, { type: 'error' });
+                    Nova.$toasted.show(response, { type: 'error' });
                 })
         }
     }

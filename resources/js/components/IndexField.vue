@@ -1,5 +1,5 @@
 <template>
-        <div v-if="field.inlineIndex" slot="field">
+        <div v-if="field.inlineIndex">
             <div class="inline-flex">
                 <div v-if="field.textOnIndex" class="flex-1 text-center py-2 m-1">{{ displayValue }}</div>
                 <div class="flex-1 text-center py-2 m-1">
@@ -29,12 +29,14 @@
 </template>
 
 <script>
-    import { Errors, FormField, HandlesValidationErrors } from 'laravel-nova'
+    import { FormField, HandlesValidationErrors } from 'laravel-nova'
     import InlineInit from './mixins/init';
     import InlineMixin from './mixins/inline';
 
     export default {
         mixins: [FormField, HandlesValidationErrors, InlineInit, InlineMixin],
+
+        props: ['resourceName', 'field'],
 
         data: () => ({
             value: false,

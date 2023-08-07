@@ -5,25 +5,16 @@
         "laravel",
         "nova"
     ],
-    "homepage": "https://github.com/markrassamni/inline-boolean",
-    "type": "library",
+    "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
-    },
-    "require-dev": {
+        "php": "^8.0",
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {
             "MarkRassamni\\InlineBoolean\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-        }
-    },
-    "scripts": {
-    },
-    "license": "MIT",
     "authors": [
         {
             "name": "Mark Rassamni",
@@ -41,5 +32,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ]
 }

@@ -1,7 +1,7 @@
 <template>
-    <panel-item :field="field">
-        <template v-if="field.inlineDetail">
-            <p slot="value" class="text-90">
+    <PanelItem :field="field">
+        <template v-if="field.inlineDetail" #value>
+            <p class="text-90">
                 <checkbox
                     @input="toggle"
                     :id="field.attribute"
@@ -12,19 +12,19 @@
             </p>
         </template>
 
-        <template v-else>
-            <p slot="value" class="text-90">
+        <template v-else #value>
+            <p class="text-90">
             <span
                     class="inline-block rounded-full w-2 h-2 mr-1"
                     :class="{ 'bg-success': field.value, 'bg-danger': !field.value }"></span>
                 <span>{{ displayValue }}</span>
             </p>
         </template>
-    </panel-item>
+    </PanelItem>
 </template>
 
 <script>
-    import { Errors, FormField, HandlesValidationErrors } from 'laravel-nova'
+    import { FormField, HandlesValidationErrors } from 'laravel-nova'
     import InlineInit from './mixins/init';
     import InlineMixin from './mixins/inline';
 

@@ -1,5 +1,9 @@
-Nova.booting((Vue, router, store) => {
-    Vue.component('index-inline-boolean', require('./components/IndexField'))
-    Vue.component('detail-inline-boolean', require('./components/DetailField'))
-    Vue.component('form-inline-boolean', require('./components/FormField'))
+import Detail from './components/DetailField'
+import Index from './components/IndexField'
+import Form from './components/FormField'
+
+Nova.booting((app, store) => {
+    app.component('index-inline-boolean', Index);
+    app.component('detail-inline-boolean', Detail);
+    app.component('form-inline-boolean', Form);
 })
