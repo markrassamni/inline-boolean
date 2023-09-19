@@ -1,6 +1,6 @@
 <?php
 
-namespace MarkRassamni\InlineBoolean;
+namespace ReginLyngsoe\InlineBoolean;
 
 use Laravel\Nova\Fields\Boolean;
 
@@ -88,5 +88,37 @@ class InlineBoolean extends Boolean
     public function showTextOnIndex($callback = true)
     {
         return $this->withMeta(['textOnIndex' => $callback]);
+    }
+
+    /**
+     * Set the tooltip for the boolean field.
+     *
+     * @param  string|callable $value
+     * @return $this
+     */
+    public function tooltip($value)
+    {
+        return $this->withMeta(['tooltip' => $value]);
+    }
+
+    /**
+     * Resolve the field's value for display.
+     *
+     * @param  mixed $resource
+     * @param  string|null $attribute
+     * @return void
+     */
+    public function resolve($resource, $attribute = null)
+    {
+        parent::resolve($resource, $attribute);
+
+        // Resolve tooltip if it's a callback
+        $tooltip = $this->meta['tooltip'] ?? null;
+
+        if (is_callable($tooltip)) {
+            $this->withMeta(['tooltip' => $tooltip($resource)]);
+        } elseif (is_string($tooltip)) {
+            $this->withMeta(['tooltip' => $resource->{$tooltip}]);
+        }
     }
 }
