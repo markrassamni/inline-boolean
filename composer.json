@@ -1,11 +1,11 @@
 {
-    "name": "markrassamni/inline-boolean",
+    "name": "reginlyngsoe/inline-boolean",
     "description": "A Laravel Nova boolean field that can be directly edited from the index or detail page of a resource.",
     "keywords": [
         "laravel",
         "nova"
     ],
-    "homepage": "https://github.com/markrassamni/inline-boolean",
+    "homepage": "https://github.com/reginlyngsoe/inline-boolean",
     "type": "library",
     "require": {
         "php": ">=7.1.0"
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MarkRassamni\\InlineBoolean\\": "src/"
+            "ReginLyngsoe\\InlineBoolean\\": "src/"
         }
     },
     "autoload-dev": {
@@ -26,14 +26,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Mark Rassamni",
-            "email": "markrassamni@me.com"
+            "name": "Regin Lyngsø",
+            "email": "serringer@gmail.com"
         }
     ],
     "extra": {
         "laravel": {
             "providers": [
-                "MarkRassamni\\InlineBoolean\\FieldServiceProvider"
+                "ReginLyngsoe\\InlineBoolean\\FieldServiceProvider"
             ]
         }
     },

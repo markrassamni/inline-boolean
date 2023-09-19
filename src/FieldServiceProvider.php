@@ -1,6 +1,6 @@
 <?php
 
-namespace MarkRassamni\InlineBoolean;
+namespace ReginLyngsoe\InlineBoolean;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
